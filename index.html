@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace NFT</title>
+</head>
+<body>
+    <h1>Marketplace NFT</h1>
+    <button id="connectMetamaskButton">Conectar Metamask</button>
+    <h2>Criar NFT</h2>
+    <form id="createNFTForm">
+        <label for="tokenId">Token ID: </label>
+        <input type="number" id="tokenId" name="tokenID" required>
+
+        <label for="price">Preço: </label>
+        <input type="number" id="price" name="price" required>
+
+        <button type="submit">Criar NFT</button>
+    </form>
+
+    <h2>Definir NFT para venda</h2>
+    <form id="setNFTForSaleForm">
+        <label for="tokenIdForSale">Token ID: </label>
+        <input type="number" name="tokenIdForSale" id="tokenIdForSale" required>
+
+        <label for="isForSale">Á venda:</label>
+        <select name="isForSale" id="isForSale">
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select>
+
+        <button type="submit">Definir para venda</button>
+    </form>
+
+    <h2>Comprar NFT</h2>
+    <form id="buyNFTForm">
+        <label for="tokenIdToBuy">Token ID: </label>
+        <input type="number" id="tokenIdToBuy" name="tokenIdToBuy" required>
+        
+        <label for="price">Preço: </label>
+        <input type="number" id="priceBuy" name="price" required>
+
+        <button type="submit">Comprar NFT</button>
+    </form>
+
+    <h2>Obter informações do NFT</h2>
+    <form id="getNFTForm">
+        <label for="tokenIdToGet">Token ID: </label>
+        <input type="number" id="tokenIdToGet" name="tokenIdToGet" required>
+
+        <button type="submit">Obter Informações</button>
+    </form>
+
+    <h2>Resultado</h2>
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
